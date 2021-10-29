@@ -514,6 +514,63 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 12.758815}
   m_EdgeRadius: 0
+--- !u!1001 &307912131
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3668676292049284741, guid: 219e7c325f0351247aa5140347cc5965, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668676292049284741, guid: 219e7c325f0351247aa5140347cc5965, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668676292049284741, guid: 219e7c325f0351247aa5140347cc5965, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668676292049284741, guid: 219e7c325f0351247aa5140347cc5965, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668676292049284741, guid: 219e7c325f0351247aa5140347cc5965, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668676292049284741, guid: 219e7c325f0351247aa5140347cc5965, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668676292049284741, guid: 219e7c325f0351247aa5140347cc5965, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668676292049284741, guid: 219e7c325f0351247aa5140347cc5965, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668676292049284741, guid: 219e7c325f0351247aa5140347cc5965, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668676292049284741, guid: 219e7c325f0351247aa5140347cc5965, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668676292049284741, guid: 219e7c325f0351247aa5140347cc5965, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8802859537193744775, guid: 219e7c325f0351247aa5140347cc5965, type: 3}
+      propertyPath: m_Name
+      value: FramesPerSecond
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 219e7c325f0351247aa5140347cc5965, type: 3}
 --- !u!1 &339049687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,6 +1230,7 @@ MonoBehaviour:
   bullet_cooldown_ship1: 0.45
   speed_multiplier_ship2: {x: 20, y: 20}
   bullet_cooldown_ship2: 0.25
+  hit_volume: 0.5
 --- !u!82 &620734525
 AudioSource:
   m_ObjectHideFlags: 0
