@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(SpriteRenderer))]
@@ -31,6 +32,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 curr_speed_multiplier;
     private bool using_fire = false;
 
+    private float inputX = 0;
+    private float inputY = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,16 +64,20 @@ public class PlayerController : MonoBehaviour
     //https://forum.unity.com/threads/input-with-fixedupdate-avoiding-input-loss-with-high-frame-rates.619483/
     void Update()
     {
+        inputX = Input.GetAxis("Horizontal");
+        inputY = Input.GetAxis("Vertical");
         if(Input.GetButton("Jump") && (!cooldown_active))
         {
             FireBullet(curr_bullet_cooldown);
+        }
+        if(Input.GetButton("Cancel"))
+        {
+            SceneManager.LoadScene("Menu");
         }
     }
 
     void FixedUpdate()
     {
-        float inputX = Input.GetAxis("Horizontal");
-        float inputY = Input.GetAxis("Vertical");
         movement = new Vector2(curr_speed_multiplier.x * inputX, curr_speed_multiplier.y * inputY);
         rigidbody_component.velocity = movement;
     }

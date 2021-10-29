@@ -444,7 +444,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.09045267}
+  m_Offset: {x: -0.53477573, y: 0.09045267}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -455,7 +455,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 12.758815}
+  m_Size: {x: 2.0695515, y: 12.758815}
   m_EdgeRadius: 0
 --- !u!1 &216251073
 GameObject:
@@ -1012,7 +1012,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.7598009}
+  m_Offset: {x: -0.46719056, y: 0.7598009}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1023,7 +1023,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 20.248274}
+  m_Size: {x: 1.9343811, y: 20.248274}
   m_EdgeRadius: 0
 --- !u!1 &599822581
 GameObject:
@@ -1153,9 +1153,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 100
   m_LinearDrag: 0
-  m_AngularDrag: 0.02
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -1226,10 +1226,10 @@ MonoBehaviour:
   fire_bullet_prefab: {fileID: 5511014272751182140, guid: bb283713dcde68848ac0232fd09e6c90, type: 3}
   ship1: {fileID: 21300000, guid: b1233310e5a1e4e4da9d29d775adff92, type: 3}
   ship2: {fileID: 21300000, guid: 058982e1bebc4a04db0da26f650f17a8, type: 3}
-  speed_multiplier_ship1: {x: 60, y: 60}
-  bullet_cooldown_ship1: 0.45
-  speed_multiplier_ship2: {x: 20, y: 20}
-  bullet_cooldown_ship2: 0.25
+  speed_multiplier_ship1: {x: 25, y: 25}
+  bullet_cooldown_ship1: 0.9
+  speed_multiplier_ship2: {x: 15, y: 15}
+  bullet_cooldown_ship2: 0.7
   hit_volume: 0.5
 --- !u!82 &620734525
 AudioSource:
@@ -1584,7 +1584,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.7598009}
+  m_Offset: {x: 0.3337074, y: 0.7598009}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1595,7 +1595,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 20.248274}
+  m_Size: {x: 1.6674148, y: 20.248274}
   m_EdgeRadius: 0
 --- !u!1001 &1219765107
 PrefabInstance:

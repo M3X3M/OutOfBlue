@@ -75,7 +75,6 @@ public class GameMaster : MonoBehaviour
         }
 
         yield return new WaitForSeconds(10f);
-        wave_is_active = false;
     }
 
     private void SpawnVerticalEnemy(GameObject vertical_enemy_prefab)
