@@ -1226,10 +1226,10 @@ MonoBehaviour:
   fire_bullet_prefab: {fileID: 5511014272751182140, guid: bb283713dcde68848ac0232fd09e6c90, type: 3}
   ship1: {fileID: 21300000, guid: b1233310e5a1e4e4da9d29d775adff92, type: 3}
   ship2: {fileID: 21300000, guid: 058982e1bebc4a04db0da26f650f17a8, type: 3}
-  speed_multiplier_ship1: {x: 25, y: 25}
-  bullet_cooldown_ship1: 0.9
+  speed_multiplier_ship1: {x: 30, y: 30}
+  bullet_cooldown_ship1: 1
   speed_multiplier_ship2: {x: 15, y: 15}
-  bullet_cooldown_ship2: 0.7
+  bullet_cooldown_ship2: 0.8
   hit_volume: 0.5
 --- !u!82 &620734525
 AudioSource:

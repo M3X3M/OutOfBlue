@@ -11,7 +11,8 @@ public class GameMaster : MonoBehaviour
     [SerializeField] private GameObject loady_prefab;
     [SerializeField] private GameObject responder_prefab;
     [SerializeField] private GameObject aoa_prefab;
-    private bool wave_is_active = false;
+    private bool wave_is_active = true;
+    private bool first_wave_over = false;
     private int wave_type = 0;
     private float[] aoa_properties = {0.1f, 1f, -0.07f};
     private float[] responder_properties = {0.05f, 1.5f, -0.1f};
@@ -27,7 +28,7 @@ public class GameMaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(enemy_group.transform.childCount <= 0)
+        if((enemy_group.transform.childCount <= 0) && (first_wave_over))
         {
             wave_is_active = false;
         }
@@ -110,8 +111,18 @@ public class GameMaster : MonoBehaviour
                 amount = amount++;
                 speed_multiplier = speed_multiplier + 0.05f;
             }
-            yield return new WaitForSeconds(20);
-            StartCoroutine(SpawnLoadyWave(5, 1f, .3f));
+            if(!first_wave_over)
+            {
+                StartCoroutine(SpawnLoadyWave(10, 1.5f, .7f));
+                yield return new WaitForSeconds(10f);
+                first_wave_over = true;
+                StartCoroutine(VerticalEnemyTimer());
+            }
+            else
+            {
+                yield return new WaitForSeconds(20);
+                StartCoroutine(SpawnLoadyWave(amount, 1.5f, .7f));
+            }
             ++counter;
         }
     }
@@ -123,9 +134,9 @@ public class GameMaster : MonoBehaviour
             case 0:
             {
                 SpawnVerticalEnemy(responder_prefab, responder_properties[0], responder_properties[1], responder_properties[2]);
-                if(responder_properties[1] > 0.2f)
+                if(responder_properties[1] > 0.1f)
                 {
-                    responder_properties[1] -= 0.05f;
+                    responder_properties[1] -= 0.08f;
                 }
                 if(responder_properties[2] > (-0.3f))
                 {
@@ -137,9 +148,9 @@ public class GameMaster : MonoBehaviour
             default:
             {
                 SpawnVerticalEnemy(aoa_prefab, aoa_properties[0], aoa_properties[1], aoa_properties[2]);
-                if(aoa_properties[1] > 0.2f)
+                if(aoa_properties[1] > 0.1f)
                 {
-                    aoa_properties[1] -= 0.05f;
+                    aoa_properties[1] -= 0.08f;
                 }
                 if(aoa_properties[2] > (-0.3f))
                 {
@@ -150,4 +161,15 @@ public class GameMaster : MonoBehaviour
             }
         }
     }
+
+    private IEnumerator VerticalEnemyTimer()
+    {
+        yield return new WaitForSeconds(30);
+        if(enemy_group.transform.childCount < 4)
+        {
+            SpawnNewWave();
+        }        
+        StartCoroutine(VerticalEnemyTimer());
+    }
 }
+
